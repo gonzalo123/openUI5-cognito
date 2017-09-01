@@ -1,0 +1,28 @@
+<mvc:View
+        controllerName="app.controller.Home"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:semantic="sap.m.semantic">
+    <semantic:FullscreenPage
+            id="page"
+            semanticRuleSet="Optimized"
+            showNavButton="false"
+            title="{i18n>loggedUser}: {/userName}">
+        <semantic:content>
+            <Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+                <headerToolbar>
+                    <Toolbar height="3rem">
+                        <Title text="Title"/>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat"/>
+                    <Button text="{i18n>Hello}" icon="sap-icon://hello-world" press="helloPress"/>
+                </content>
+            </Panel>
+        </semantic:content>
+        <semantic:customFooterContent>
+            <Button text="{i18n>LogOff}" icon="sap-icon://visits" press="onLogOffPress"/>
+        </semantic:customFooterContent>
+    </semantic:FullscreenPage>
+</mvc:View>

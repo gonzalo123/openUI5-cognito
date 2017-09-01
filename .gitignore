@@ -1,0 +1,5 @@
+storage
+vendor
+env/.env
+www/app/conf/env.js
+www/app/media/login.jpg

@@ -1,0 +1,13 @@
+{
+    "require": {
+        "laravel/lumen": "^5.4",
+        "spomky-labs/jose": "^6.1",
+        "predis/predis": "^1.1",
+        "symfony/cache": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

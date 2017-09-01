@@ -1,0 +1,50 @@
+<core:View
+        xmlns:core="sap.ui.core"
+        xmlns:f="sap.ui.layout.form"
+        xmlns="sap.m"
+        controllerName="app.controller.Login"
+>
+    <Image class="bg"></Image>
+    <VBox class="sapUiSmallMargin loginForm">
+        <f:SimpleForm visible="{= ${/flow} === 'login' }">
+            <f:toolbar>
+                <Toolbar>
+                    <Title text="{i18n>Login_Title}" level="H4" titleStyle="H4"/>
+                </Toolbar>
+            </f:toolbar>
+            <f:content>
+                <Label text="{i18n>Login_user}"/>
+                <Input placeholder="{i18n>Login_userPlaceholder}" value="{/user}"/>
+                <Label text="{i18n>Login_pass}"/>
+                <Input type="Password" placeholder="{i18n>Login_passPlaceholder}" value="{/pass}"/>
+                <Button type="Accept" text="{i18n>OK}" press="loginPressHandle"/>
+            </f:content>
+        </f:SimpleForm>
+        <f:SimpleForm visible="{= ${/flow} === 'PasswordReset' }">
+            <f:toolbar>
+                <Toolbar>
+                    <Title text="{i18n>Login_PasswordReset}" level="H4" titleStyle="H4"/>
+                </Toolbar>
+            </f:toolbar>
+            <f:content>
+                <Label text="{i18n>Login_verificationCode}"/>
+                <Input type="Number" placeholder="{i18n>Login_verificationCodePlaceholder}" value="{/verificationCode}"/>
+                <Label text="{i18n>Login_newpass}"/>
+                <Input type="Password" placeholder="{i18n>Login_newpassPlaceholder}" value="{/newPass}"/>
+                <Button type="Accept" text="{i18n>OK}" press="newPassVerificationPressHandle"/>
+            </f:content>
+        </f:SimpleForm>
+        <f:SimpleForm visible="{= ${/flow} === 'newPasswordRequired' }">
+            <f:toolbar>
+                <Toolbar>
+                    <Title text="{i18n>Login_PasswordReset}" level="H4" titleStyle="H4"/>
+                </Toolbar>
+            </f:toolbar>
+            <f:content>
+                <Label text="{i18n>Login_newpass}"/>
+                <Input type="Password" placeholder="{i18n>Login_newpassPlaceholder}" value="{/newPass}"/>
+                <Button type="Accept" text="{i18n>OK}" press="newPassPressHandle"/>
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
+</core:View>
